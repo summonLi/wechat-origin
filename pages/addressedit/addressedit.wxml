@@ -1,0 +1,26 @@
+<!--pages/addressedit/addressedit.wxml-->
+<view class='container'>
+  <view class='submitorder-remark'>
+    <text class='remark-text'>收货人</text>
+    <input class='input-remark' placeholder="姓名" value='{{name}}' type="text" />
+  </view>
+  <view class='submitorder-remark'>
+    <text class='remark-text'>联系方式</text>
+    <input class='input-remark' maxlength='11' placeholder="手机号码" type="number" value='{{phone}}'/>
+  </view>
+  <view class='submitorder-remark'>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" style='flex:1;'>
+    <text class='remark-text'>所在地区</text>
+    <text class='region-text'>{{region[0]}}{{region[1]}}{{region[2]}}</text>
+        <!-- <input class='input-remark' placeholder="-- 请选择 --" placeholder-style='color:blue' type="text" value='{{region[0]}}，{{region[1]}}，{{region[2]}}'/> -->
+  </picker>
+
+  </view>
+  <view class='submitorder-remark'>
+    <text class='remark-text'>详细地址</text>
+    <input class='input-remark' placeholder="详细到楼栋楼层或房间号" type="text" value='{{address}}'/>
+  </view>
+
+  <view class='commonBtn' bindtap='onOk'>确认</view>
+  <view class='commonBtn deleteBtn' hidden='{{type=="add"}}'>删除地址</view>
+</view>

@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="findIcon">
+    <view><image src="../../images/tdbuser.png"></image><text>新品预约</text></view>
+    <view><image src="../../images/tdbuser.png"></image><text>活动频道</text></view>
+    <view><image src="../../images/tdbuser.png"></image><text>线下门店</text></view>
+    <view><image src="../../images/tdbuser.png"></image><text>小米团购</text></view>
+  </view>
+  <view class="findContent">
+    <view class='findImg'><image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535608090906&di=d253a2f3222e637a0a05c9e95c9c7e98&imgtype=0&src=http%3A%2F%2Fc1.mifile.cn%2Ff%2Fi%2F16%2Fchain%2Fmtwatch-2%2Fmtwatch-07.jpg"></image></view>
+    <view class="findTit"><text class="findT">专题</text><text>你所向往的智慧生活，小米为你实现</text></view>
+  </view>
+    <view class="findContent">
+    <view class='findImg'><image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535608090906&di=d253a2f3222e637a0a05c9e95c9c7e98&imgtype=0&src=http%3A%2F%2Fc1.mifile.cn%2Ff%2Fi%2F16%2Fchain%2Fmtwatch-2%2Fmtwatch-07.jpg"></image></view>
+    <view class="findTit"><text class="findT">活动</text><text>小米年货节，全家过个科技年</text></view>
+  </view>
+    <view class="findContent">
+    <view class='findImg'><image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535608090906&di=d253a2f3222e637a0a05c9e95c9c7e98&imgtype=0&src=http%3A%2F%2Fc1.mifile.cn%2Ff%2Fi%2F16%2Fchain%2Fmtwatch-2%2Fmtwatch-07.jpg"></image></view>
+    <view class="findTit"><text class="findT">专题</text><text>2018，小米年</text></view>
+  </view>
+</view>

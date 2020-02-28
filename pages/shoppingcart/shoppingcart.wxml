@@ -1,0 +1,38 @@
+<view class="container">
+<!-- 无商品显示 -->
+  <view class="noCart" style="display:none;">
+    <view class="cartImg"><image src="../../images/shopcar.png"></image></view>  
+    <view class="cartTxt">购物车暂无商品</view>
+    <view class="cartBtn">到小米商城逛逛</view>
+  </view>
+<!-- 有商品显示 -->
+  <view class="cartCon">
+    <view class="cartBox" wx:for="{{shopCar}}" wx:key="index"> 
+      <view class="cartGoods">
+        <view class="cartShop">
+          <view class="selectShop" id="{{item.id}}" bindtap="clickShop" data-shopSelStu="{{item.shopSelStu}}"><image src="{{item.shopSelStu?'../../images/check2.png':'../../images/check1.png'}}"></image></view>
+          <image class="shopImg" src="../../images/icon06.png"></image>
+          <text>{{item.name}}</text>
+        </view>
+        <view class="cartProduct" wx:for="{{item.product}}" wx:key="index">
+          <view class="selectPro" bindtap="clickGoods" data-classifyId="{{item.classifyId}}" data-id="{{item.id}}" data-goodsSelStu="{{item.checkStatus}}"><image src="{{item.checkStatus?'../../images/check2.png':'../../images/check1.png'}}"></image></view>
+          <view class="proImg"><image src="{{item.image}}"></image></view>
+          <view class="proInfo">
+            <view class="proTit">{{item.title}}</view>
+            <view class="proSpecify">{{item.specification}}</view>
+            <view class="proPriNum">
+              <text class="proPri">￥{{item.price}}</text>
+              <view class="proNum"><view class="numBtn lessNum" data-types="minus" data-id="{{item.id}}" data-classifyId="{{item.classifyId}}" catchtap="numchangeTap">-</view><input value="{{item.amount}}" disabled type="text" class="num"/><view class="numBtn addNum" data-types="add" data-id="{{item.id}}" data-classifyId="{{item.classifyId}}" catchtap="numchangeTap">+</view></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+<!-- 结算 -->
+  <view class="clearingBox">
+    <view class="allSelect" catchtap="allcheckTap"><image src="{{allsel?'../../images/check2.png':'../../images/check1.png'}}"></image></view>
+    <text>全选</text>
+    <view class="cartSettle" catchtap='onSettlement'>结算(<text>{{totalNum}}</text>)</view><view class="cartTotal">合计：<text>￥{{total}}</text></view>
+  </view>
+</view>

@@ -1,0 +1,133 @@
+/* pages/myorder/myorder.wxss */
+.myorder-headerscroll {
+  display: flex;
+  background: #fff;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+}
+
+.myorder-header {
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+}
+
+.myorder-header.active {
+  color: #ff6200;
+}
+
+.submitorder-goodsInfo {
+  display: flex;
+  background: #fff;
+  flex-direction: column;
+  width: 94%;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+}
+
+.submitorder-shop {
+  padding: 20rpx;
+  border-bottom: 1px solid #f7f7f7;
+  display: flex;
+  align-content: center;
+}
+
+.submitorder-shop image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.submitorder-goods {
+  display: flex;
+  padding: 20rpx;
+  align-items: center;
+}
+
+.submitorder-goodsImg {
+  width:120rpx;
+  height:120rpx;
+  margin-right: 20rpx;
+}
+
+.submitorder-goodsText {
+  flex: 1;
+}
+
+.submitorder-goodsSpecification {
+  background: #f8f8f8;
+  padding: 6rpx;
+  border-radius: 5rpx;
+  display: inline-block;
+  margin-top: 10rpx;
+  color: #bababa;
+}
+
+.submitorder-goodsPrice {
+  display: flex;
+  margin-top: 10rpx;
+}
+
+.goodsPrice {
+  flex: 1;
+  color: #ff6700;
+}
+
+.goods-num {
+  color: #bababa;
+}
+
+.submitorder-subtotalBox {
+  padding: 20rpx;
+  text-align: right;
+}
+
+.myorder-main {
+  margin-top: 100rpx;
+}
+
+.pay-text {
+  color: #ff6700;
+  text-align: right;
+  flex: 1;
+}
+
+.submitorder-total {
+  color: #bababa;
+  margin-right: 10rpx;
+  flex: 1;
+  font-size: 22rpx;
+}
+
+.submitorder-pay {
+  color: #bababa;
+}
+
+.myorder-btnbox {
+  width: 96%;
+  border-top: 1px solid #f7f7f7;
+  margin: 0 auto;
+  padding: 10rpx 0;
+  text-align: right;
+}
+
+.myorder-goPay {
+  text-align: center;
+  padding: 10rpx 30rpx;
+  background: #ff6200;
+  color: #fff;
+  display: inline-block;
+  border-radius: 8rpx;
+}
+
+.scrollH {
+  height: 100%;
+}
+
+

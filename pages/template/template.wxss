@@ -1,0 +1,52 @@
+/* pages/template/template.wxss */
+.goodsBox .goods {
+  width: 49.5%;
+  float: left;
+
+}
+
+.goodsBox .goods:nth-child(odd) {
+  margin-right: 1%;
+}
+
+.goodsImg {
+  width: 100%;
+  height: 360rpx;
+  overflow: hidden;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+
+.goodsImg image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.goodsTxt { 
+  padding: 20rpx 0rpx 20rpx 20rpx;
+}
+
+.goodsTxt text {
+  display: block;
+  height: 45rpx;
+  line-height: 45rpx;
+  overflow: hidden;
+  white-space: noweap;
+  text-overflow: ellipsis;
+}
+
+.goodsTxt text:nth-child(1) {
+  color: #3a3a3a;
+}
+
+.goodsTxt text:nth-child(2) {
+  color: #7c7c7c;
+  font-size: 24rpx;
+}
+
+.goodsTxt text:nth-child(3) {
+  color: #ff6000;
+  font-size: 26rpx;
+}

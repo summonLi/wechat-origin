@@ -1,0 +1,8 @@
+<!--pages/authorization/authorization.wxml-->
+<view class='container'>
+<image class='applogo' src='../../images/logo.png'></image>
+<text class='appName'>小试牛刀</text>
+<text class='triangle'></text>
+<view class='description'>授权账号登录"小试牛刀"</view>
+<button class='authorizationBtn' lang="zh_CN" open-type='getUserInfo' bindgetuserinfo="getUserInfo">授权登录</button>
+</view>

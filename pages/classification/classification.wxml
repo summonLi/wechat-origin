@@ -1,0 +1,31 @@
+<view class="container">
+<scroll-view class="classificationL" scroll-y="true" scroll-with-animation="true" scroll-top="{{scrollTop}}">
+   <block wx:for-items="{{categoryData}}" wx:key="{{index}}"> 
+    <view class="navItem {{curIndex==item.id ? 'active' : ''}}" bindtap="tapClick" id="{{item.id}}">{{item.name}}</view>
+  </block>
+</scroll-view>
+<scroll-view class='classificationR' scroll-y="true" scroll-with-animation="true" scroll-into-view="{{toView}}">
+  <view class='classifyImgs'><image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535608611960&di=e6d010b11f0aa009b126ba69e0cd9392&imgtype=0&src=http%3A%2F%2Fupload.techweb.com.cn%2Fs%2F640%2F2018%2F0719%2F1531992548785.png'></image></view>
+  <block wx:for-items="{{categoryData}}" wx:key="{{index}}">
+    <view class='classifyBox' id='classifyR{{item.id}}'>
+      <view class='classifyTit'><text class='line'></text>{{item.name}}<text class='line'></text></view>
+      <view class='classifyCon'>
+        <block wx:for-items="{{item.productList}}" wx:key="{{index}}">
+          <view><image src='{{item.image}}'></image><text>{{item.name}}</text></view>
+        </block>
+      </view>
+    </view>
+  </block>
+  <!-- <view class='classifyBox'>
+    <view class='classifyTit'><text class='line'></text>手机<text class='line'></text></view>
+    <view class='classifyCon'>
+      <view><image src='../../images/pic01.png'></image><text>小米6X</text></view>
+      <view><image src='../../images/pic02.png'></image><text>小米MIX 2S</text></view>
+      <view><image src='../../images/pic03.png'></image><text>红米S2</text></view>
+      <view><image src='../../images/pic04.png'></image><text>红米Note5</text></view>
+      <view><image src='../../images/pic05.png'></image><text>黑鲨游戏手机</text></view>
+      <view><image src='../../images/pic06.png'></image><text>黑鲨游戏手机</text></view>
+    </view>
+  </view>-->
+</scroll-view>
+</view>

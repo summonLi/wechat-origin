@@ -1,0 +1,196 @@
+<!--pages/myorder/myorder.wxml-->
+<view class='container'>
+  <scroll-view scroll-x="true" class='myorder-headerscroll'>
+    <view class='myorder-header {{currentTab == 0? "active":""}}' data-current="0" bindtap='switchTab'>待付款</view>
+    <view class='myorder-header {{currentTab == 1? "active":""}}' data-current="1" bindtap='switchTab'>待收货</view>
+    <view class='myorder-header {{currentTab == 2? "active":""}}' data-current="2" bindtap='switchTab'>已完成</view>
+    <view class='myorder-header {{currentTab == 3? "active":""}}' data-current="3" bindtap='switchTab'>全部订单</view>
+  </scroll-view>
+
+  <swiper style='height:{{winHeight}}rpx;' current="{{currentTab}}" duration='300' class='myorder-main'>
+    <swiper-item>
+      <scroll-view scroll-y="true" class='scrollH'>
+        <view class='submitorder-goodsInfo'>
+          <view class='submitorder-shop'>
+            <image src="../../images/icon06.png"></image>
+            <text>向阳生长的未来</text>
+            <text class='pay-text'>待支付</text>
+          </view>
+          <view class='submitorder-goods'>
+            <image class="submitorder-goodsImg" src='../../images/pro08.jpg'></image>
+            <view class='submitorder-goodsText cm-ellipsis-2'>
+              向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！
+            </view>
+          </view>
+          <view class="submitorder-subtotalBox">
+            <text class="submitorder-total">共2件商品</text>
+            <text class="submitorder-pay"> 应付金额:</text>
+            <text class="submitorder-subtotal">￥444.00</text>
+          </view>
+          <view class='myorder-btnbox'>
+            <text class='myorder-goPay'>去支付</text>
+          </view>
+        </view>
+        <view class='submitorder-goodsInfo'>
+          <view class='submitorder-shop'>
+            <image src="../../images/icon06.png"></image>
+            <text>向阳生长的未来</text>
+            <text class='pay-text'>待支付</text>
+          </view>
+          <view class='submitorder-goods'>
+            <image class="submitorder-goodsImg" src='../../images/pro08.jpg'></image>
+            <view class='submitorder-goodsText cm-ellipsis-2'>
+              向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！
+            </view>
+          </view>
+          <view class="submitorder-subtotalBox">
+            <text class="submitorder-total">共2件商品</text>
+            <text class="submitorder-pay"> 应付金额:</text>
+            <text class="submitorder-subtotal">￥444.00</text>
+          </view>
+          <view class='myorder-btnbox'>
+            <text class='myorder-goPay'>去支付</text>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class='scrollH'>
+        <view class='submitorder-goodsInfo'>
+          <view class='submitorder-shop'>
+            <image src="../../images/icon06.png"></image>
+            <text>向阳生长的未来</text>
+            <text class='pay-text'>待收货</text>
+          </view>
+          <view class='submitorder-goods'>
+            <image class="submitorder-goodsImg" src='../../images/pro08.jpg'></image>
+            <view class='submitorder-goodsText cm-ellipsis-2'>
+              向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！
+            </view>
+          </view>
+          <view class="submitorder-subtotalBox">
+            <text class="submitorder-total">共2件商品</text>
+            <text class="submitorder-pay"> 应付金额:</text>
+            <text class="submitorder-subtotal">￥444.00</text>
+          </view>
+          <view class='myorder-btnbox'>
+            <text class='myorder-goPay'>确认收货</text>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class='scrollH'>
+        <view class='submitorder-goodsInfo'>
+          <view class='submitorder-shop'>
+            <image src="../../images/icon06.png"></image>
+            <text>向阳生长的未来</text>
+            <text class='pay-text'>已完成</text>
+          </view>
+          <view class='submitorder-goods'>
+            <image class="submitorder-goodsImg" src='../../images/pro08.jpg'></image>
+            <view class='submitorder-goodsText cm-ellipsis-2'>
+              向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！
+            </view>
+          </view>
+          <view class="submitorder-subtotalBox">
+            <text class="submitorder-total">共2件商品</text>
+            <text class="submitorder-pay"> 应付金额:</text>
+            <text class="submitorder-subtotal">￥444.00</text>
+          </view>
+          <view class='myorder-btnbox'>
+            <text class='myorder-goPay'>再次购买</text>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="true" class='scrollH'>
+        <view class='submitorder-goodsInfo'>
+          <view class='submitorder-shop'>
+            <image src="../../images/icon06.png"></image>
+            <text>向阳生长的未来</text>
+            <text class='pay-text'>待支付</text>
+          </view>
+          <view class='submitorder-goods'>
+            <image class="submitorder-goodsImg" src='../../images/pro08.jpg'></image>
+            <view class='submitorder-goodsText cm-ellipsis-2'>
+              向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！
+            </view>
+          </view>
+          <view class="submitorder-subtotalBox">
+            <text class="submitorder-total">共2件商品</text>
+            <text class="submitorder-pay"> 应付金额:</text>
+            <text class="submitorder-subtotal">￥444.00</text>
+          </view>
+          <view class='myorder-btnbox'>
+            <text class='myorder-goPay'>去支付</text>
+          </view>
+        </view>
+        <view class='submitorder-goodsInfo'>
+          <view class='submitorder-shop'>
+            <image src="../../images/icon06.png"></image>
+            <text>向阳生长的未来</text>
+            <text class='pay-text'>待支付</text>
+          </view>
+          <view class='submitorder-goods'>
+            <image class="submitorder-goodsImg" src='../../images/pro08.jpg'></image>
+            <view class='submitorder-goodsText cm-ellipsis-2'>
+              向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！
+            </view>
+          </view>
+          <view class="submitorder-subtotalBox">
+            <text class="submitorder-total">共2件商品</text>
+            <text class="submitorder-pay"> 应付金额:</text>
+            <text class="submitorder-subtotal">￥444.00</text>
+          </view>
+          <view class='myorder-btnbox'>
+            <text class='myorder-goPay'>去支付</text>
+          </view>
+        </view>
+        <view class='submitorder-goodsInfo'>
+          <view class='submitorder-shop'>
+            <image src="../../images/icon06.png"></image>
+            <text>向阳生长的未来</text>
+            <text class='pay-text'>待支付</text>
+          </view>
+          <view class='submitorder-goods'>
+            <image class="submitorder-goodsImg" src='../../images/pro08.jpg'></image>
+            <view class='submitorder-goodsText cm-ellipsis-2'>
+              向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！
+            </view>
+          </view>
+          <view class="submitorder-subtotalBox">
+            <text class="submitorder-total">共2件商品</text>
+            <text class="submitorder-pay"> 应付金额:</text>
+            <text class="submitorder-subtotal">￥444.00</text>
+          </view>
+          <view class='myorder-btnbox'>
+            <text class='myorder-goPay'>去支付</text>
+          </view>
+        </view>
+        <view class='submitorder-goodsInfo'>
+          <view class='submitorder-shop'>
+            <image src="../../images/icon06.png"></image>
+            <text>向阳生长的未来</text>
+            <text class='pay-text'>待支付</text>
+          </view>
+          <view class='submitorder-goods'>
+            <image class="submitorder-goodsImg" src='../../images/pro08.jpg'></image>
+            <view class='submitorder-goodsText cm-ellipsis-2'>
+              向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！向阳生长的未来，一定是美好的，加油！！！！
+            </view>
+          </view>
+          <view class="submitorder-subtotalBox">
+            <text class="submitorder-total">共2件商品</text>
+            <text class="submitorder-pay"> 应付金额:</text>
+            <text class="submitorder-subtotal">￥444.00</text>
+          </view>
+          <view class='myorder-btnbox'>
+            <text class='myorder-goPay'>去支付</text>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

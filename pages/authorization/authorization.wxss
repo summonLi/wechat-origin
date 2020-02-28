@@ -1,0 +1,46 @@
+/* pages/authorization/authorization.wxss */
+.container {
+ align-items: center; 
+}
+
+.applogo {
+  margin-top: 100rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+}
+
+.appName {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 30rpx 0 40rpx 0;
+}
+
+.triangle {
+  /* background: #fff; */
+  /* height: 40rpx;
+  width: 40rpx; */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom:10px solid #fff;
+}
+
+.description {
+  width: 80%;
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+  background: #fff;
+  border-radius: 10rpx;
+  box-shadow: 1px 1px 5px #9E9E9E;
+  margin-bottom: 100rpx;
+}
+
+.authorizationBtn {
+  width: 90%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  background: #ff6700;
+  color: #fff;
+}

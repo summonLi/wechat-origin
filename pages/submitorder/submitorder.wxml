@@ -1,0 +1,90 @@
+<!--pages/submitorder/submitorder.wxml-->
+<view class='container'>
+  <view class='submitorder-address' catchtap='goAddress' id='{{addressInfo.id}}'>
+    <view class='submitorder-address-info'>
+      <view>
+        <text class='address-name'>{{addressInfo.name}}</text>
+        <text class='address-phone'>{{addressInfo.phone}}</text>
+      </view>
+      <view class='address-info cm-ellipsis-2'>{{addressInfo.address}}</view>
+      <view class='address-tip'>收货不便时，可选择免费代收服务</view>
+    </view>
+    <image class='submitorder-ricon' src='../../images/index.png'></image>
+  </view>
+
+  <view class='submitorder-goodsCon'>
+    <view class='submitorder-goodsInfo'>
+      <view class='submitorder-shop'>
+        <image src="../../images/icon06.png"></image>
+        <text>中国特产店</text>
+      </view>
+      <view class='submitorder-goods'>
+        <image class="submitorder-goodsImg" src='../../images/pic03.png'></image>
+        <view class='submitorder-goodsText'>
+          <view class='cm-ellipsis-2'>合适的话发货的说法还是短发伙食费合适的话复合大师复合函数电话费</view>
+          <view class='submitorder-goodsSpecification'>黑色 10张1包</view>
+          <view class='submitorder-goodsPrice'>
+            <text class='goodsPrice'>￥222</text>
+            <text class='goods-num'>x2</text>
+          </view>
+        </view>
+      </view>
+      <view class='submitorder-remark'>
+        <text class='remark-text'>订单备注</text>
+        <input class='input-remark' placeholder="选填，给商家留言" type="text" />
+      </view>
+      <view class="submitorder-subtotalBox">
+        <text class="submitorder-total">共2计</text>
+        <text>小计:</text>
+        <text class="submitorder-subtotal">￥444.00</text>
+      </view>
+    </view>
+
+    <view class='submitorder-goodsInfo'>
+      <view class='submitorder-shop'>
+        <image src="../../images/icon06.png"></image>
+        <text>中国特产店</text>
+      </view>
+      <view class='submitorder-goods'>
+        <image class="submitorder-goodsImg" src='../../images/pic03.png'></image>
+        <view class='submitorder-goodsText'>
+          <view class='cm-ellipsis-2'>合适的话发货的说法还是短发伙食费合适的话复合大师复合函数电话费</view>
+          <view class='submitorder-goodsSpecification'>黑色 10张1包</view>
+          <view class='submitorder-goodsPrice'>
+            <text class='goodsPrice'>￥222</text>
+            <text class='goods-num'>x2</text>
+          </view>
+        </view>
+      </view>
+      <view class='submitorder-goods'>
+        <image class="submitorder-goodsImg" src='../../images/pic03.png'></image>
+        <view class='submitorder-goodsText'>
+          <view class='cm-ellipsis-2'>合适的话发货的说法还是短发伙食费合适的话复合大师复合函数电话费</view>
+          <view class='submitorder-goodsSpecification'>黑色 10张1包</view>
+          <view class='submitorder-goodsPrice'>
+            <text class='goodsPrice'>￥222</text>
+            <text class='goods-num'>x2</text>
+          </view>
+        </view>
+      </view>
+      <view class='submitorder-remark'>
+        <text class='remark-text'>订单备注</text>
+        <input class='input-remark' placeholder="选填，给商家留言" type="text" />
+      </view>
+      <view class="submitorder-subtotalBox">
+        <text class="submitorder-total">共4件</text>
+        <text>小计:</text>
+        <text class="submitorder-subtotal">￥888.00</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="submitorder-bottom">
+    <!-- <view class='display:flex;'> -->
+      <text class="submitorder-total">共6件，</text>
+      <text>合计:</text>
+      <text class="submitorder-subtotal">￥1332.00</text>
+      <text class="submitorder-btn">提交订单</text>
+    <!-- </view> -->
+  </view>
+</view>

@@ -1,0 +1,173 @@
+/* pages/submitorder/submitorder.wxss */
+.submitorder-address {
+  padding: 20rpx;
+  background: #fff;
+  margin: 20rpx 0;
+  display: flex;
+  align-items: center;
+}
+
+.submitorder-address-info {
+  flex: 1;
+}
+
+.address-name {
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+
+.address-phone {
+  color: #bababa;
+}
+
+.address-info{
+  margin: 10rpx 0;
+}
+
+.address-tip {
+  color: #ff6700;
+}
+
+.submitorder-ricon {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.submitorder-goodsCon {
+  margin-bottom: 100rpx;
+}
+
+.submitorder-goodsInfo {
+  display: flex;
+  background: #fff;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+}
+
+.submitorder-shop {
+  padding: 20rpx;
+  border-bottom: 1px solid #f7f7f7;
+  display: flex;
+  align-content: center;
+}
+
+.submitorder-shop image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.submitorder-goods {
+  display: flex;
+  padding: 20rpx;
+}
+
+.submitorder-goodsImg {
+  width:160rpx;
+  height:160rpx;
+}
+
+.submitorder-goodsText {
+  flex: 1;
+}
+
+.submitorder-goodsSpecification {
+  background: #f8f8f8;
+  padding: 6rpx;
+  border-radius: 5rpx;
+  display: inline-block;
+  margin-top: 10rpx;
+  color: #bababa;
+}
+
+.submitorder-goodsPrice {
+  display: flex;
+  margin-top: 10rpx;
+}
+
+.goodsPrice {
+  flex: 1;
+  color: #ff6700;
+}
+
+.goods-num {
+  color: #bababa;
+}
+
+.submitorder-remark {
+  display: flex;
+  padding: 20rpx;
+  border-top: 1px solid #f7f7f7;
+  align-content: center;
+}
+
+.remark-text {
+  height: 1.4rem;
+  line-height: 1.4rem;
+  margin-right: 20rpx;
+}
+
+.input-remark {
+  flex: 1;
+}
+
+.submitorder-subtotalBox {
+  padding: 20rpx;
+  text-align: right;
+}
+
+.submitorder-total {
+  color: #bababa;
+  margin-right: 10rpx;
+  flex: 1;
+}
+
+.submitorder-subtotal {
+  color: #ff6700;
+}
+
+.submitorder-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  padding: 20rpx 0;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-top: 1px solid #f7f7f7;
+}
+
+.submitorder-btn {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  width: 160rpx;
+  color: #fff;
+  background: #ff6700;
+  border-radius: 40rpx;
+  margin: 0 20rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

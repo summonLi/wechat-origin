@@ -1,0 +1,67 @@
+.findIcon {
+  background: #fff;
+  padding: 20rpx 0;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.findIcon view {
+  width: 24.5%;
+  float: left;
+  text-align: center;
+  border-right: 1px solid #f8f8f8;
+}
+
+.findIcon view:last-child {
+  border-right: none;
+}
+
+.findIcon view image {
+  width: 70rpx;
+  height: 70rpx;
+  margin: 0 auto;
+  display: block;
+}
+
+.findIcon view text {
+  display: inline-block;
+  color: #7e7e7e;
+}
+
+.findContent {
+  width: 96%;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 1px 1px 5px #9E9E9E;
+  margin-bottom: 20rpx;
+}
+
+.findImg {
+  width: 100%;
+  height: 350rpx;
+}
+
+.findImg image {
+  width: 100%;
+  height: 100%;
+}
+
+.findTit {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.findT {
+  background: #ff6700;
+  color: #fff;
+  padding: 5rpx 15rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+}
+
+
+

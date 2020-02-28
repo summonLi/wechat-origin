@@ -1,0 +1,12 @@
+<!--pages/template/template.wxml-->
+<!-- index页面的产品 -->
+<template name="index-Product">
+    <view class="goodsImg">
+      <image src="{{img}}"></image>
+    </view>
+    <view class="goodsTxt">
+      <text>{{name}}</text>
+      <text>{{title}}</text>
+      <text>{{price}}元</text>
+    </view>
+</template>

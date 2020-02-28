@@ -1,0 +1,12 @@
+<!--pages/address/address.wxml-->
+<view class='container'>
+  <view class="address-list" wx:for="{{addressList}}" wx:key="{{index}}" bindtap='{{isShow?"":"onSelect"}}' data-isSelect='{{item.isSelect}}' id='{{item.id}}'> 
+    <image hidden='{{isShow}}' class='address-icon' src='{{item.isSelect ? "../../images/check2.png":"../../images/check1.png"}}'></image>
+    <view class='address-info'>
+      <view class='address-name'>{{item.name}} <text class="address-phone">{{item.phone}}</text></view>
+      <view class='cm-ellipsis-2 address-detail'>{{item.address}}</view>
+    </view>
+    <view class='address-edit' catchtap='goEdit' data-id='{{item.id}}' data-name='{{item.name}}' data-phone='{{item.phone}}' data-addressdetail="{{item.addressdetail}}" data-province='{{item.province}}' data-city="{{item.city}}" data-district="{{item.district}}">编辑</view>
+  </view>
+  <view class='address-add' bindtap='goAdd'>新增收货地址</view>
+</view>

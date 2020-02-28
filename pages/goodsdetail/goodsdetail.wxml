@@ -1,0 +1,68 @@
+<view class='container'>
+  <!--banner-->
+  <swiper indicator-dots="true" autoplay="auto" interval="3000" duration="500">
+    <block wx:for="{{proDetail.goodsImg}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src='{{item}}' data-src='{{item}}' bindtap='previewImage'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--goodsInfo-->
+  <view class='goodsInfo'>
+    <text class='title'>{{proDetail.title}}</text>
+    <text class='note'>{{proDetail.titleChild}}</text>
+    <view class='goodsPrice'><text class='price'>商城价：￥{{proDetail.price}}</text><text class='originalPrice'>原价：￥{{proDetail.oprice}}</text></view>
+  </view>
+  <view class='goodsShop bgColor'>
+    <view class='shopCon cm-flex'>
+      <view class='shopLogo'><image src='{{proDetail.shopLogo}}'></image></view>
+      <view class='shopInfo'>
+        <view class='shopName cm-ellipsis-1'>{{proDetail.shopName}}</view>
+        <view class='shopAddress cm-ellipsis-1'>店铺地址：{{proDetail.address}}</view>
+      </view>
+    </view>
+    <view class='shopBtn cm-flex'>
+      <view class='collectShop cm-flex1' catchtap="handCollection" ><image src="{{proDetail.isCollection?'../../images/foot1c.png':'../../images/foot1.png'}}"></image>收藏店铺</view>
+      <view class='goShop cm-flex1'><image src='../../images/foot0.png'></image>进入店铺</view>
+    </view>
+  </view>
+  <view class='goodsDetailBox bgColor'>
+    <text class='detailTitle'>-- 商品介绍 --</text>
+    <view class='detailImg'><image src='{{proDetail.goodsDetail}}' mode="widthFix"></image></view>
+  </view>
+  <view class='bottomBtn cm-flex'>
+    <view class='contactService btnImgCm cm-flex1'><image src='../../images/foot4.png'></image><text>联系客服</text></view>
+    <view class='cart btnImgCm cm-flex1' catchtap="goCart"><image src='../../images/foot3.png'></image><text>购物车</text><view class='cartNum'>2</view></view>
+    <view class='addCart btnCm cm-flex2' bindtap='showGoodsSpecifi' data-type="cart">加入购物车</view>
+    <view class='buyNow btnCm cm-flex2' bindtap='showGoodsSpecifi' data-type="buy">立即购买</view>
+  </view>
+  <view class='cm-maskBg  {{goodsSpecifiShow ?"":"cm-hide"}}' bindtap='closeGoodsSpecifi'></view>
+  <view class='goodsSpecifi {{goodsSpecifiShow ?"":"cm-hide"}}'>
+    <view class='closeBtn' bindtap='closeGoodsSpecifi'><image src='../../images/close_one.png'></image></view>
+    <view class='specifiInfo cm-flexAuto'>
+      <view class='specifiImg'><image src='../../images/pro08.jpg'></image></view>
+      <view class='specifiR'>
+        <view class='specifiPrice'>￥{{proDetail.price}}</view>
+        <view class='specifiStock'>库存{{proDetail.stock}}件</view>
+        <view class='specifiSel'>{{selectSpe}}</view>
+      </view>
+    </view>
+    <view class='specifiBox'>
+      <view class='specifiT'>尺码</view>
+      <view class='specifiList'>
+        <text class="{{isSelect ==item?'selectSpe':''}}" catchtap="selectSpe" wx:for="{{proDetail.specification}}" wx:key="{{index}}" data-spe="{{item}}">{{item}}</text>
+      </view>
+    </view>
+    <view class='buyNumBox'>
+      <view class='buyLeft'>购买数量</view>
+      <view class="buyRight">
+        <view class='quantityBox'>
+          <text catchtap="handAdd" class="{{num == 1?'disabled':''}}" data-type='minus'>-</text>
+          <input value="{{num}}" disabled type="text" class="num"/>
+          <text catchtap="handAdd" class="numBtn addNum" data-type='add'>+</text>
+        </view>
+      </view>
+    </view>
+    <view class='certainBtn' bindtap='onComfirm'>确 定</view>
+  </view>
+</view><!--container-->

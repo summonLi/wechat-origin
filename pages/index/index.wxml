@@ -1,0 +1,64 @@
+<!--index.wxml-->
+<!-- /引入模板 -->
+<import src="/pages/template/template" /> 
+<view class="container">
+  <view class='searchBox'>
+    <view class='search'>
+      <input name='search' type='text' placeholder='搜索商品产品' class='searchValue'></input>
+      <view class='goSearch'><image src='../../images/search1.png'></image></view>
+    </view>
+  </view>
+  <view class="banner">
+    <swiper autoplay="auto" interval="3000" duration="500" current="{{swiperCurrent}}" bindchange='swiperChange' style='height: 350rpx;'>
+      <block wx:for="{{imgUrls}}" wx:key="unique">
+        <swiper-item>
+          <view class="indexBanner">
+            <image src="{{item}}" />
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{imgUrls}}" wx:key="unique">
+        <view class="dot {{index==swiperCurrent ? 'active':''}}" bindtap="chuangEvent" id="{{index}}">{{index+1}}</view>
+      </block>
+    </view>
+  </view>
+  <view class="indexIcon">
+    <view><image src='../../images/icon02.png'></image><text>手机</text></view>
+    <view><image src='../../images/icon02.png'></image><text>电视</text></view>
+    <view><image src='../../images/icon02.png'></image><text>电脑</text></view>
+    <view><image src='../../images/icon02.png'></image><text>智能</text></view>
+    <view><image src='../../images/icon02.png'></image><text>新品</text></view>
+  </view>
+  <view class="indexCategory">
+      <view><image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555400041&di=4622ff09614e0636e5a14243651eda5f&imgtype=jpg&er=1&src=http%3A%2F%2Fwww.elecfans.com%2Fuploads%2Fallimg%2F170521%2F10433S015-3.jpg"></image></view>
+      <view><image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535608611960&di=e6d010b11f0aa009b126ba69e0cd9392&imgtype=0&src=http%3A%2F%2Fupload.techweb.com.cn%2Fs%2F640%2F2018%2F0719%2F1531992548785.png"></image></view>
+      <view><image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2130741498,1636788653&fm=26&gp=0.jpg"></image></view>
+  </view>
+  <view class='indexImg'>
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535608861014&di=dff1b1c960b2c5f9600331a651a72d6f&imgtype=0&src=http%3A%2F%2Fimage.yzmg.com%2F201804%2F20180425%2F20180425164020281.jpg"></image>
+  </view>
+
+  <view class='indexPro'>
+    <view class='proTitle'>速来闪购</view>
+    <scroll-view class='proBox' scroll-x="true">
+      <view class='pro'><image src='../../images/pro08.jpg'></image><view class="proTxt"><text>￥1399</text><text class='txtThrough'>￥1499</text></view></view>
+      <view class='pro'><image src='../../images/pro08.jpg'></image><view class="proTxt"><text>￥155</text><text class='txtThrough'>￥165</text></view></view>
+      <view class='pro'><image src='../../images/pro08.jpg'></image><view class="proTxt"><text>￥888</text><text class='txtThrough'>￥999</text></view></view>
+      <view class='pro'><image src='../../images/pro08.jpg'></image><view class="proTxt"><text>￥1000</text><text class='txtThrough'>￥1100</text></view></view>
+      <view class='pro'><image src='../../images/pro08.jpg'></image><view class="proTxt"><text>￥1399</text><text class='txtThrough'>￥1499</text></view></view>
+      <view class='pro'><image src='../../images/pro08.jpg'></image><view class="proTxt"><text>￥1399</text><text class='txtThrough'>￥1499</text></view></view>
+    </scroll-view>
+  </view>
+  <view class="indexGoods">
+    <view class="goodsTitleImg"><image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535608919497&di=0f5242b79402ab60737f081b0201653c&imgtype=0&src=http%3A%2F%2Fofjn5tuqf.qnssl.com%2F30c22cf50fbc2f266447060e47e80ba6.jpg"></image></view>
+    <view class="goodsBox">
+    <block wx:for="{{productList}}" wx:key="{{index}}">
+    <view class="goods" catchtap='goGoodsdetail' data-index='{{index}}'>
+      <template is="index-Product" data="{{...item}}"/>
+    </view>
+    </block>
+    </view>
+  </view>
+</view>

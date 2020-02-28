@@ -1,0 +1,30 @@
+/* pages/addressedit/addressedit.wxss */
+.submitorder-remark {
+  display: flex;
+  padding: 20rpx;
+  border-top: 1px solid #f7f7f7;
+  align-content: center;
+  background: #fff;
+}
+
+.remark-text {
+  height: 1.4rem;
+  line-height: 1.4rem;
+  margin-right: 20rpx;
+  width: 20%;
+}
+
+.input-remark {
+  flex: 1;
+}
+
+.commonBtn.deleteBtn {
+  background: none;
+  color: #323232;
+  border: 1px solid #d0d0d0;
+}
+
+.region-text {
+  color: blue;
+  margin-left: 30rpx;
+}
